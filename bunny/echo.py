@@ -1,6 +1,6 @@
 from config import DEV, STUFF
 from .data import KeshavX
-from bunny.Database.echo import *
+from Bunny.Database.echo import *
 from .verify import verify
 from pyrogram import Client, filters
 
