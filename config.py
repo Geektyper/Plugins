@@ -16,7 +16,9 @@ class TOKENS:
     STRING_SESSION_8 = os.getenv("STRING_SESSION_8", "")
     STRING_SESSION_9 = os.getenv("STRING_SESSION_9", "")
     STRING_SESSION_10 = os.getenv("STRING_SESSION_10", "")
-
+    
+class config:
+    MONGO_DATABASE = os.getenv("MONGO_DATABASE","mongodb+srv://rahul:rahulkr@cluster0.szdpcp6.mongodb.net/?retryWrites=true&w=majority")
 class DATABASE:
     MONGO_DB_URL = os.getenv("MONGO_DB_URL", "")
 
