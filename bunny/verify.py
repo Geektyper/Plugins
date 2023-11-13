@@ -1,4 +1,4 @@
-from YashuAlpha.Database.sudo import is_sudo
+from bunny.Database.sudo import is_sudo
 from config import DEV
 
 LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID]
