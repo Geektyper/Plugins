@@ -3,7 +3,7 @@ import asyncio
 from pyrogram import Client, filters
 from pyrogram.enums import ChatType
 from pyrogram.types import *
-
+from pyrogram import Client as app
 from .. import *
 from bunny.modules.data import approve, disapprove, is_approved
 
