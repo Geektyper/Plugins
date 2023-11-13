@@ -3,8 +3,8 @@ import random
 from config import STUFF, DEV
 import asyncio
 from .data import KeshavX
-from YashuAlpha.Database.replyraid import *
-from YashuAlpha.Database.sudo import get_sudos
+from bunny.Database.replyraid import *
+from bunny.Database.sudo import get_sudos
 from .verify import verify
 from pyrogram import Client, filters 
 hl = STUFF.COMMAND_HANDLER
