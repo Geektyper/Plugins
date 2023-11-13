@@ -4,7 +4,7 @@ import time
 import sys
 from external_client import BOT
 from alphagram import Alpha
-
+from config import MONGO_DATABASE
 if not BOT:
     print("BOT TOKEN NOT FOUND, ADD IT TO INITIATE !")
     sys.exit()
@@ -105,3 +105,14 @@ else:
     txt = f"{a} CLIENTS"
 print(f"\n\n{txt} STARTED SUCCESSFULLY !\nJoin @SpLBots")
 idle()
+
+try:
+    LOGGER.info("Connecting To Mongo Database ...")
+    MONGO_DB_URL = Config.MONGO_DATABASE
+    _mongo_async_ = AsyncIOMotorClient(MONGO_DB_URL)
+    mongodb = _mongo_async_.rabbit
+    LOGGER.info("Succesfully Connected.")
+except Exception as e:
+    print(f"Error: {e}")
+    LOGGER.error("Failed To Connect To Your Mongo Database.")
+    exit()
