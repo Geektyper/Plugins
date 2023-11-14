@@ -20,11 +20,11 @@ LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
 START_MARKUP_STR = IKM(
                [
                [
-               IKB("💭 Owner 💭", url="t.me/NotKeshav"),
+               IKB("💭 Owner 💭", url="t.me/Notrealgeek"),
                IKB("✨ Support ✨", url="t.me/SpLBots")
                ],
                [
-               IKB("🔥 Repo 🔥", url="https://github.com/ShutupKeshav/SpLSpamUserBot")
+               IKB("🔥 Repo 🔥", url="https://github.com/Geektyper/RABBITX")
                ]
                ]
                )
@@ -33,7 +33,7 @@ START_MARKUP_DEV = IKM(
                [
                [
                IKB("💫 Commands 💫", callback_data="cmds"),
-               IKB("💭 Support 💭", url="t.me/SpLBots")
+               IKB("💭 Support 💭", url="t.me/DevsX_Community")
                ]
                ]
                )  
@@ -54,7 +54,7 @@ async def start(_, m):
     await m.reply_photo(START_PIC, caption=txt, reply_markup=START_MARKUP_STR)
     return
 
-HELP_TEXT = "★ 𝙎𝙥𝙇 𝙓 𝙎𝙥𝙖𝙢 𝙃𝙚𝙡𝙥 𝙈𝙚𝙣𝙪 ★\n𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐁𝐞𝐥𝐨𝐰 𝐁𝐮𝐭𝐭𝐨𝐧𝐬 𝐅𝐨𝐫 𝐇𝐞𝐥𝐩"
+HELP_TEXT = "★   𝙎𝙥𝙖𝙢 𝙃𝙚𝙡𝙥 𝙈𝙚𝙣𝙪 ★\n𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐁𝐞𝐥𝐨𝐰 𝐁𝐮𝐭𝐭𝐨𝐧𝐬 𝐅𝐨𝐫 𝐇𝐞𝐥𝐩"
 
 SPAM_HELP = spam_msg = f"""
 **Help Spam Cmds**
@@ -130,8 +130,8 @@ HELP_MARKUP = IKM(
               IKB("💭 Extras 💭", callback_data="extra")
               ],
               [
-              IKB("😶‍🌫️ Owner 😶‍🌫️", url="t.me/NotKeshav"),
-              IKB("✨ Support ✨", url="t.me/SpLBots")
+              IKB("😶‍🌫️ Owner 😶‍🌫️", url="t.me/Notrealgeek"),
+              IKB("✨ Support ✨", url="t.me/DevsX_Community")
               ]
               ]
               )
