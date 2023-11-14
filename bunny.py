@@ -3,7 +3,7 @@ from config import *
 import time
 import sys
 from external_client import BOT
-from geekgram import Alpha
+from geekgram import Geek
 from config import MONGO_DATABASE
 if not BOT:
     print("BOT TOKEN NOT FOUND, ADD IT TO INITIATE !")
