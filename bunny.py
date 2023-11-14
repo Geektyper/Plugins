@@ -4,48 +4,48 @@ import time
 import sys
 from external_client import BOT
 from geekgram import Geek
-from config import MONGO_DATABASE
+from config import DATABASE
 if not BOT:
     print("BOT TOKEN NOT FOUND, ADD IT TO INITIATE !")
     sys.exit()
 if not TOKENS.STRING_SESSION:
     print("MAIN STRING NOT FOUND, ADD IT TO INITIATE !")
     sys.exit()
-END = Client(":END:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION, plugins=dict(root="YashuAlpha"))
+END = Client(":END:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION, plugins=dict(root="bunny"))
 if TOKENS.STRING_SESSION_2:
-    END2 = Client(":END2:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_2, plugins=dict(root="YashuAlpha"))
+    END2 = Client(":END2:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_2, plugins=dict(root="bunny"))
 else:
     END2 = None
 if TOKENS.STRING_SESSION_3:
-    END3 = Client(":END3:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_3, plugins=dict(root="YashuAlpha"))
+    END3 = Client(":END3:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_3, plugins=dict(root="bunny"))
 else:
     END3 = None
 if TOKENS.STRING_SESSION_4:
-    END4 = Client(":END4:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_4, plugins=dict(root="YashuAlpha"))
+    END4 = Client(":END4:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_4, plugins=dict(root="bunny"))
 else:
     END4 = None
 if TOKENS.STRING_SESSION_5:
-    END5 = Client(":END5:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_5, plugins=dict(root="YashuAlpha"))
+    END5 = Client(":END5:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_5, plugins=dict(root="bunny"))
 else:
     END5 = None
 if TOKENS.STRING_SESSION_6:
-    END6 = Client(":END6:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_6, plugins=dict(root="YashuAlpha"))
+    END6 = Client(":END6:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_6, plugins=dict(root="bunny"))
 else:
     END6 = None
 if TOKENS.STRING_SESSION_7:
-    END7 = Client(":END7:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_7, plugins=dict(root="YashuAlpha"))
+    END7 = Client(":END7:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_7, plugins=dict(root="bunny"))
 else:
     END7 = None
 if TOKENS.STRING_SESSION_8:
-    END8 = Client(":END8:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_8, plugins=dict(root="YashuAlpha"))
+    END8 = Client(":END8:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_8, plugins=dict(root="bunny"))
 else:
     END8 = None
 if TOKENS.STRING_SESSION_9:
-    END9 = Client(":END9:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_9, plugins=dict(root="YashuAlpha"))
+    END9 = Client(":END9:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_9, plugins=dict(root="bunny"))
 else:
     END9 = None
 if TOKENS.STRING_SESSION_10:
-    END10 = Client(":END10:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_10, plugins=dict(root="YashuAlpha"))
+    END10 = Client(":END10:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_10, plugins=dict(root="bunny"))
 else:
     END10 = None
 
@@ -54,8 +54,7 @@ print("Bot started, enable inline mode if not enabled !")
 print("Starting User Clients...")
 END.start()
 try:
-    END.join_chat("splbots")
-    END.join_chat("coding_bots")
+    END.join_chat("DevsX_Community")
 except:
     pass
 print("\nEND1 STARTED !")
@@ -94,8 +93,7 @@ for x in CLIENTS:
     else:
         continue
     try:
-        x.join_chat("splbots")
-        x.join_chat("coding_bots")
+        x.join_chat("DevsX_Community")
     except:
         pass
 
@@ -103,16 +101,7 @@ if a == 1:
     txt = "1 CLIENT"
 else:
     txt = f"{a} CLIENTS"
-print(f"\n\n{txt} STARTED SUCCESSFULLY !\nJoin @SpLBots")
+print(f"\n\n{txt} STARTED SUCCESSFULLY !\nJoin @DevsX_Community")
 idle()
 
-try:
-    LOGGER.info("Connecting To Mongo Database ...")
-    MONGO_DB_URL = Config.MONGO_DATABASE
-    _mongo_async_ = AsyncIOMotorClient(MONGO_DB_URL)
-    mongodb = _mongo_async_.rabbit
-    LOGGER.info("Succesfully Connected.")
-except Exception as e:
-    print(f"Error: {e}")
-    LOGGER.error("Failed To Connect To Your Mongo Database.")
-    exit()
+
