@@ -1,20 +1,11 @@
-# Credits: @mrismanaziz
-# Copyright (C) 2022 Pyro-ManUserbot
-#
-# This file is a part of < https://github.com/mrismanaziz/PyroMan-Userbot/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/mrismanaziz/PyroMan-Userbot/blob/main/LICENSE/>.
-#
-# t.me/SharingUserbot & t.me/Lunatic0de
-
 from gpytranslate import Translator
 from pyrogram import Client, enums, filters
 from pyrogram.types import Message
 
-from config import CMD_HANDLER as cmd
-from ProjectMan.helpers.basic import edit_or_reply
+from config import STUFF
+from bunny.helpers.basic import edit_or_reply
 
-from .help import add_command_help
+cmd = STUFF.COMMAND_HANDLER
 
 
 @Client.on_message(filters.me & filters.command(["tr", "trt", "translate"], cmd))
