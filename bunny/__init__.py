@@ -1,6 +1,7 @@
 import time
 from config import STUFF , API , TOKENS
 from pyrogram import Client, filters
+from datetime import datetime
 
 from aiohttp import ClientSession
 
@@ -51,5 +52,10 @@ app2 = Client(
     session_string=str(TOKENS.STRING_SESSION),
 )
 aiosession = ClientSession()
+
+StartTime = time.time()
+
+START_TIME = datetime.now()
+
 
 
