@@ -139,7 +139,6 @@ Command :
 2) {hl}rmecho <reply to user>
 
 
-
 **© @Notrealgeek**
 """
 
@@ -149,7 +148,6 @@ SANG_HELP = f"""
 **Sangmata :** To Active Echo On Any User
 Command :
 1) {hl}sg <reply to a user> show history of a user
-
 
 
 **© @Notrealgeek**
@@ -188,11 +186,8 @@ Command :
 2) {hl}Join : Type in the Group bots will join that group.
 
 
-
 **© @Notrealgeek**
 """
-
-
 
 EXTRA_HELP = f"""
 **Help Extra Cmds**
