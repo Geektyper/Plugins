@@ -160,7 +160,8 @@ CARBON_HELP = f"""
 1) {hl}ban <reply to a reply to a user> Bans a user
 2) {hl}kick <reply to a user> Kicks a user out of group
 3) {hl}setgpic <reply a picture> sets the given pic as group pic
-
+4) {hl}promote <reply to a user> Promotes   a user 
+5) {hl}demote <reply to a user> Demotes a user
 
 
 **© @Notrealgeek**
