@@ -1,4 +1,4 @@
-from YashuAlpha.Database.sudo import add_sudo, del_sudo, is_sudo, get_sudos
+from bunny.Database.sudo import add_sudo, del_sudo, is_sudo, get_sudos
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from config import STUFF, DEV
