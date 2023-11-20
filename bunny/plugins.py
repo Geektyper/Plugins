@@ -94,7 +94,7 @@ Command :
 Q_HELP = f"""
 **Help Quote Cmds**
 
-**QUOTE :** Makes a Quote.
+**Quote :** Makes a Quote.
 Command :
 1) {hl}q Makes a Quote of given text 
 
@@ -120,7 +120,7 @@ Command :
 PM_HELP = f"""
 **Help PM GAURD Cmds**
 
-**PM GAURD :** To Activate Pm Gaurd On Any User
+**Pm Gaurd :** To Activate Pm Gaurd On Any User
 Command :
 1) {hl}a To Approve a User's dm <reply to user>
 2) {hl}da To Dapprove a User's dm <reply to user>
