@@ -25,7 +25,12 @@ async def pmPermit(client: Client, message: Message):
             chat_id = message.chat.id
             if chat_id in pchats:
                 return
-            await message.reply_text("        🔥 𝙃𝙚𝙡𝙡𝘽𝙤𝙩 𝙋𝙈 𝙎𝙚𝙘𝙪𝙧𝙞𝙩𝙮 🔥\n\nHello!! This is an automated message on behalf of My Owner.")
+            await message.reply_text("        🔥    𝙍𝘼𝘽𝘽𝙄𝙏𝙓 𝙋𝙈 𝙎𝙚𝙘𝙪𝙧𝙞𝙩𝙮 🔥
+
+
+Hello!! This is an automated message on behalf of My Owner
+
+Please wait until my owner comes 🙂👍.")
             return
 
     
