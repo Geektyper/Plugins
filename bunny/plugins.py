@@ -191,7 +191,7 @@ HELP_MARKUP = IKM(
               ],
               [
               IKB(" Clone ", callback_data="clone")
-              IKB(" Extras ", callback_data="extra"),
+              IKB(" Purge ", callback_data="pur"),
               IKB(" Echo ", callback_data="echo")
               ],
               [
@@ -202,7 +202,7 @@ HELP_MARKUP = IKM(
               [
              IKB(" Carbon ", callback_data="carbon")
               IKB(" Translate ", callback_data="trans"),
-              IKB(" Purge ", callback_data="pur")
+              IKB(" Extra ", callback_data="extras")
               ]
               ]
               )
