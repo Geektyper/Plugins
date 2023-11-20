@@ -41,4 +41,11 @@ async def get_id_and_args(_, m):
                 id = x.user.id
     return id, args
 
+app2 = Client(
+    "bunny",
+    api_id=config.API_ID,
+    api_hash=config.API_HASH,
+    session_string=str(config.SESSION),
+)
+
 
