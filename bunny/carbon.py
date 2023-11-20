@@ -1,24 +1,15 @@
-# Credits: @mrismanaziz
-# Copyright (C) 2022 Pyro-ManUserbot
-#
-# This file is a part of < https://github.com/mrismanaziz/PyroMan-Userbot/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/mrismanaziz/PyroMan-Userbot/blob/main/LICENSE/>.
-#
-# t.me/SharingUserbot & t.me/Lunatic0de
-
 import asyncio
 from io import BytesIO
 
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from config import CMD_HANDLER as cmd
-from ProjectMan import aiosession
-from ProjectMan.helpers.basic import edit_or_reply
-from ProjectMan.helpers.PyroHelpers import ReplyCheck
+from config import STUFF
+from bunny import aiosession
+from bunny.helpers.basic import edit_or_reply
+from bunny.helpers.PyroHelpers import ReplyCheck
 
-from .help import add_command_help
+
 
 
 async def make_carbon(code):
@@ -58,9 +49,4 @@ async def carbon_func(client: Client, message: Message):
     carbon.close()
 
 
-add_command_help(
-    "carbon",
-    [
-        ["carbon <reply>", "Carbonisasi teks dengan pengaturan default."],
-    ],
-)
+
