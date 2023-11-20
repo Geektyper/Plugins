@@ -9,7 +9,7 @@ from bunny import app2 as USER
 
 PMSET =True
 pchats = []
-BOT_NAME = (RABBITX)
+BOT_NAME = "RABBITX"
 PMPERMIT = STUFF.PMPERMIT
 SUDO_USERS = DEV.SUDO_USERS
 
