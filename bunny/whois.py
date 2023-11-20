@@ -136,16 +136,3 @@ async def chatinfo_handler(client: Client, message: Message):
         return await Man.edit(f"**INFO:** `{e}`")
 
 
-add_command_help(
-    "info",
-    [
-        [
-            "info <username/userid/reply>",
-            "dapatkan info pengguna telegram dengan deskripsi lengkap.",
-        ],
-        [
-            "chatinfo <username/chatid/reply>",
-            "dapatkan info group dengan deskripsi lengkap.",
-        ],
-    ],
-)
