@@ -2,6 +2,8 @@ import time
 from config import STUFF , API , TOKENS
 from pyrogram import Client, filters
 
+from aiohttp import ClientSession
+
 hl = STUFF.COMMAND_HANDLER
 
 startTime = time.time()
