@@ -1,5 +1,5 @@
 import time
-from config import STUFF
+from config import STUFF , API
 
 hl = STUFF.COMMAND_HANDLER
 
@@ -43,8 +43,8 @@ async def get_id_and_args(_, m):
 
 app2 = Client(
     "bunny",
-    api_id=config.API_ID,
-    api_hash=config.API_HASH,
+    api_id=API.API_ID,
+    api_hash=API.API_HASH,
     session_string=str(config.SESSION),
 )
 
