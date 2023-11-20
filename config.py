@@ -30,6 +30,7 @@ class DEV:
     # YOU CAN ADD SUDO USING /addsudo
 
 class STUFF:
+    PMPERMIT = getenv("PMPERMIT", None)
     ALIVE_PIC = os.getenv("ALIVE_PIC", "")
     HELP_PIC = os. getenv("HELP_PIC", "")
     START_PIC = os. getenv("START_PIC", "")
