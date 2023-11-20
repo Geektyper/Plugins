@@ -214,23 +214,23 @@ HELP_MARKUP = IKM(
               [
               [
               IKB(" Spam ", callback_data="spam"),
-              IKB(" Raid ", callback_data="raid")
+              IKB(" Raid ", callback_data="raid"),
               IKB(" Quote ", callback_data="quote"),
               ],
               [
               IKB(" Clone ", callback_data="clone")
               IKB(" Purge ", callback_data="pur"),
-              IKB(" Echo ", callback_data="echo")
+              IKB(" Echo ", callback_data="echo"),
               ],
               [
               IKB(" Pm gaurd ", callback_data="pm"),
-              IKB(" Afk ", callback_data="afk")
-              IKB(" Sangmata ", callback_data="sang")
+              IKB(" Afk ", callback_data="afk"),
+              IKB(" Sangmata ", callback_data="sang"),
               ],
               [
              IKB(" Carbon ", callback_data="carbon")
               IKB(" Translate ", callback_data="trans"),
-              IKB(" Extra ", callback_data="extra")
+              IKB(" Extra ", callback_data="extra"),
               ]
               ]
               )
