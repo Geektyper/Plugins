@@ -287,39 +287,3 @@ async def demote(client: Client, message: Message):
     await Man.edit(f"Demoted! {umention}")
 
 
-add_command_help(
-    "admin",
-    [
-        [f"{cmd}ban <reply/username/userid> <alasan>", "Membanned member dari grup."],
-        [
-            f"{cmd}unban <reply/username/userid> <alasan>",
-            "Membuka banned member dari grup.",
-        ],
-        [f"{cmd}kick <reply/username/userid>", "Mengeluarkan pengguna dari grup."],
-        [
-            f"{cmd}promote atau {cmd}fullpromote",
-            "Mempromosikan member sebagai admin atau cofounder.",
-        ],
-        [f"{cmd}demote", "Menurunkan admin sebagai member."],
-        [
-            f"{cmd}mute <reply/username/userid>",
-            "Membisukan member dari Grup.",
-        ],
-        [
-            f"{cmd}unmute <reply/username/userid>",
-            "Membuka mute member dari Grup.",
-        ],
-        [
-            f"{cmd}pin <reply>",
-            "Untuk menyematkan pesan dalam grup.",
-        ],
-        [
-            f"{cmd}unpin <reply>",
-            "Untuk melepaskan pin pesan dalam grup.",
-        ],
-        [
-            f"{cmd}setgpic <reply ke foto>",
-            "Untuk mengubah foto profil grup",
-        ],
-    ],
-)
