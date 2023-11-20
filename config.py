@@ -1,4 +1,11 @@
 import os
+from os import getenv
+
+from dotenv import load_dotenv
+
+load_dotenv()
+
+PMPERMIT = getenv("PMPERMIT","ENABLE")
 
 class API:
     API_ID = int(os.getenv("API_ID", ""))
@@ -36,5 +43,3 @@ class STUFF:
     START_PIC = os. getenv("START_PIC", "")
     COMMAND_HANDLER = os. getenv("COMMAND_HANDLER", "!")
     ALLOW_PORN = os.getenv("ALLOW_PORN", True) # CHANGE 'True' TO 'False' IF YOU WANNA DISABLE PORN
-
-PMPERMIT = os.getenv("PMPERMIT","ENABLE")
