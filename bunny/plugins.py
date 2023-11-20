@@ -143,7 +143,7 @@ Command :
 **© @Notrealgeek**
 """
 
-SAG_HELP = f"""
+SANG_HELP = f"""
 **Help Sangmata Cmds**
 
 **Sangmata :** To Active Echo On Any User
@@ -231,7 +231,7 @@ HELP_MARKUP = IKM(
               [
               IKB(" Pm gaurd ", callback_data="pm"),
               IKB(" Afk ", callback_data="afk")
-              IKB(" Sangmata ", callback_data="sg")
+              IKB(" Sangmata ", callback_data="sang")
               ],
               [
              IKB(" Carbon ", callback_data="carbon")
@@ -313,6 +313,27 @@ async def extra_cbq(_, q):
         return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
     await q.answer()
     await q.edit_message_text(text=EXTRA_HELP, reply_markup=CLOSE_MARKUP)
+
+@BOT.on_callback_query(filters.regex("sang"))
+async def extra_cbq(_, q):
+    if not await verify(q.from_user.id):
+        return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
+    await q.answer()
+    await q.edit_message_text(text=SANG_HELP, reply_markup=CLOSE_MARKUP)
+
+@BOT.on_callback_query(filters.regex("carbon"))
+async def extra_cbq(_, q):
+    if not await verify(q.from_user.id):
+        return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
+    await q.answer()
+    await q.edit_message_text(text=CARBON_HELP, reply_markup=CLOSE_MARKUP)
+
+@BOT.on_callback_query(filters.regex("trans"))
+async def extra_cbq(_, q):
+    if not await verify(q.from_user.id):
+        return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
+    await q.answer()
+    await q.edit_message_text(text=TRANS_HELP, reply_markup=CLOSE_MARKUP)
 
 @BOT.on_callback_query(filters.regex("pm"))
 async def extra_cbq(_, q):
