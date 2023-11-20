@@ -7,12 +7,12 @@ from typing import Tuple
 from PIL import Image, ImageDraw, ImageFont
 
 absen = [
-    "**Hadir bang** 😁",
-    "**Hadir kak** 😉",
-    "**Hadir dong** 😁",
-    "**Hadir ganteng** 🥵",
-    "**Hadir bro** 😎",
-    "**Hadir kak maap telat** 🥺",
+    "**Present**, hi 😁",
+    "**Here**, hi 😉",
+    "**Present**, come on 😁",
+    "**Present**, handsome 🥵",
+    "**Here**, bro 😎",
+    "**Present**, sorry for being late 🥺",
 ]
 
 
