@@ -40,7 +40,7 @@ async def add_or_del_sudo(_, m):
     await add_sudo(id)
     return await eor(m, f"<i>{id} is added to sudo...!</i>")
 
-@Client.on_message(filters.command("sudos", hl))
+@Client.on_message(filters.command("sudolist", hl))
 async def sudo_users(_, m):
     if not await verify(m.from_user.id):
         return
