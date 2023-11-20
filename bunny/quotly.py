@@ -3,7 +3,7 @@ import asyncio
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from config STUFF
+from config import STUFF
 from bunny.helpers.tools import get_arg
 
 cmd = STUFF.COMMAND_HANDLER
