@@ -9,7 +9,7 @@ from config import STUFF
 from bunny.helpers.basic import edit_or_reply
 from bunny.utils.pastebin import paste
 
-
+cmd = STUFF.COMMAND_HANDLER
 
 pattern = re.compile(r"^text/|json$|yaml$|xml$|toml$|x-sh$|x-shellscript$")
 
