@@ -120,6 +120,18 @@ Command :
 **© @userbot_crack**
 """
 
+AFK_HELP = f"""
+**Help Echo Cmds**
+
+**Afk :** To Active Afk On Any User
+Command :
+1) {hl}afk
+
+
+
+**© @userbot_crack**
+"""
+
 
 
 EXTRA_HELP = f"""
@@ -147,4 +159,113 @@ Command :
 
 **© @Notrealgeek**
 """
+
+HELP_MARKUP = IKM(
+              [
+              [
+              IKB("⚡️ Spam ⚡️", callback_data="spam"),
+              IKB("🔥 Raid 🔥", callback_data="raid")
+              ],
+              [
+              IKB("💭 Extras 💭", callback_data="extra"),
+              IKB("💖 Echo 💖", callback_data="echo")
+              ],
+              [
+              IKB("🔥 Pm gaurd 🔥", callback_data="pm"),
+              IKB("💖 AFK 💖", callback_data="afk")
+              ],
+              [
+              IKB("😶‍🌫️ Owner 😶‍🌫️", url="t.me/Userbot_crack"),
+              IKB("✨ Support ✨", url="t.me/Neiman_X_support")
+              ]
+              ]
+              )
+botun = None
+
+@Client.on_message(filters.command("help", hl))
+async def help(_, m):
+    global botun
+    if not botun:
+        botun = (await BOT.get_me()).username
+    if not await verify(m.from_user.id):
+        return
+    ok = await m.reply(" 🙂 ")
+    try:
+        nice = await _.get_inline_bot_results(bot=botun, query="inline_help")
+    except Exception as e:
+        return await m.reply(e)
+    try:
+        await ok.delete()
+        await m.delete()
+    except:
+        pass
+    try:
+        await _.send_inline_bot_result(m.chat.id, nice.query_id, nice.results[0].id)
+    except Exception as e:
+        await m.reply(e)
+
+CLOSE_MARKUP = IKM(
+               [
+               [
+               IKB("🗑️ Close", callback_data="close")
+               ]
+               ]
+               )
+
+@BOT.on_callback_query(filters.regex("cmds"))
+async def cmds_cbq(_, q):
+    if not await verify(q.from_user.id):
+        return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
+    await q.answer()
+    await q.edit_message_text(text=HELP_TEXT, reply_markup=HELP_MARKUP)
+
+@BOT.on_callback_query(filters.regex("spam"))
+async def spam_cbq(_, q):
+    if not await verify(q.from_user.id):
+        return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
+    await q.answer()
+    await q.edit_message_text(text=SPAM_HELP, reply_markup=CLOSE_MARKUP)
+
+@BOT.on_callback_query(filters.regex("raid"))
+async def raid_cbq(_, q):
+    if not await verify(q.from_user.id):
+        return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
+    await q.answer()
+    await q.edit_message_text(text=RAID_HELP, reply_markup=CLOSE_MARKUP)
+
+@BOT.on_callback_query(filters.regex("extra"))
+async def extra_cbq(_, q):
+    if not await verify(q.from_user.id):
+        return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
+    await q.answer()
+    await q.edit_message_text(text=EXTRA_HELP, reply_markup=CLOSE_MARKUP)
+
+@BOT.on_callback_query(filters.regex("pm"))
+async def extra_cbq(_, q):
+    if not await verify(q.from_user.id):
+        return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
+    await q.answer()
+    await q.edit_message_text(text=PM_HELP, reply_markup=CLOSE_MARKUP)
+
+@BOT.on_callback_query(filters.regex("echo"))
+async def extra_cbq(_, q):
+    if not await verify(q.from_user.id):
+        return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
+    await q.answer()
+    await q.edit_message_text(text=ECHO_HELP, reply_markup=CLOSE_MARKUP)
+
+@BOT.on_callback_query(filters.regex("afk"))
+async def extra_cbq(_, q):
+    if not await verify(q.from_user.id):
+        return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
+    await q.answer()
+    await q.edit_message_text(text=AFK_HELP, reply_markup=CLOSE_MARKUP)
+
+@BOT.on_callback_query(filters.regex("close"))
+async def close_cbq(_, q):
+    if not await verify(q.from_user.id):
+        return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
+    await q.answer()
+    await q.message.delete()
+
 
