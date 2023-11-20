@@ -144,11 +144,15 @@ Command :
 """
 
 AFK_HELP = f"""
-**Help Echo Cmds**
+**Help Join / leave Cmds**
 
-**Afk :** To Active Afk On Any User
+**Join :** To join or leave any group 
 Command :
-1) {hl}afk
+1) {hl}leave <group/chat id>
+2) {hl}leave : Type in the Group bot will auto leave that group
+
+1) {hl}Join <group/chat id>
+2) {hl}Join : Type in the Group bots will join that group.
 
 
 
@@ -164,21 +168,6 @@ EXTRA_HELP = f"""
 Command :
 1) {hl}ping 
 2) {hl}alive
-
-**Echo :** To Active Echo On Any User
-Command :
-1) {hl}addecho <reply to user>
-2) {hl}rmecho <reply to user>
-
-**Leave:** To Leave Group/Channel
-Command :
-1) {hl}leave <group/chat id>
-2) {hl}leave : Type in the Group bot will auto leave that group
-
-**Join:** To Leave Group/Channel
-Command :
-1) {hl}Join <group/chat id>
-2) {hl}Join : Type in the Group bots will join that group.
 
 **paste** Paste any file or test as image
 Command :
