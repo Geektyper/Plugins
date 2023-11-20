@@ -1,6 +1,3 @@
-# This class was created for combot and has been disclosed by Sergey
-# https://t.me/combotchat/45392
-
 import re
 
 
