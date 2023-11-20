@@ -4,7 +4,7 @@ from config import DEV
 from config import STUFF
 from pyrogram import filters
 from pyrogram.types import Message
-from bunny import app2 as USER
+from bunny import CLIENTS
 
 
 PMSET =True
@@ -13,8 +13,8 @@ BOT_NAME = "RABBITX"
 PMPERMIT = STUFF.PMPERMIT
 SUDO_USERS = DEV.SUDO_USERS
 
-@USER.on_message(filters.text & filters.private & ~filters.me & ~filters.bot)
-async def pmPermit(client: USER, message: Message):
+@Client.on_message(filters.text & filters.private & ~filters.me & ~filters.bot)
+async def pmPermit(client: Client, message: Message):
     if PMPERMIT == "ENABLE":
         if PMSET:
             chat_id = message.chat.id
@@ -43,8 +43,8 @@ async def bye(client: Client, message: Message):
             await message.reply_text("ᴘᴍᴘᴇʀᴍɪᴛ ᴛᴜʀɴᴇᴅ ᴏғғ")
             return
 
-@USER.on_message(filters.text & filters.private & filters.me)        
-async def autopmPermiat(client: USER, message: Message):
+@Client.on_message(filters.text & filters.private & filters.me)        
+async def autopmPermiat(client: Client, message: Message):
     chat_id = message.chat.id
     if not chat_id in pchats:
         pchats.append(chat_id)
@@ -52,8 +52,8 @@ async def autopmPermiat(client: USER, message: Message):
         return
     message.continue_propagation()    
     
-@USER.on_message(filters.command("a", [".", ""]) & filters.me & filters.private)
-async def pmPermiat(client: USER, message: Message):
+@Client.on_message(filters.command("a", [".", ""]) & filters.me & filters.private)
+async def pmPermiat(client: Client, message: Message):
     chat_id = message.chat.id
     if not chat_id in pchats:
         pchats.append(chat_id)
@@ -62,8 +62,8 @@ async def pmPermiat(client: USER, message: Message):
     message.continue_propagation()    
     
 
-@USER.on_message(filters.command("da", [".", ""]) & filters.me & filters.private)
-async def rmpmPermiat(client: USER, message: Message):
+@Client.on_message(filters.command("da", [".", ""]) & filters.me & filters.private)
+async def rmpmPermiat(client: Client, message: Message):
     chat_id = message.chat.id
     if chat_id in pchats:
         pchats.remove(chat_id)
