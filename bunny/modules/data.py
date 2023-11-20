@@ -1,9 +1,9 @@
-from bunny import mongodb
+from bunny import db
 from typing import Dict, List, Union
 
 
 
-permitdb = mongodb.pmprotection
+permitdb = db.pmprotection
 
 async def is_approved() -> list:
     pm = await permitdb.find_one({'permit': 'protection'})
