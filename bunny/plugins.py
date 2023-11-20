@@ -175,8 +175,8 @@ HELP_MARKUP = IKM(
               IKB(" AFK ", callback_data="afk")
               ],
               [
-              IKB(" Owner ", url="t.me/Userbot_crack"),
-              IKB(" Support ", url="t.me/Neiman_X_support")
+              IKB(" Owner ", url="t.me/notrealgeek"),
+              IKB(" Support ", url="t.me/notrealgeek")
               ]
               ]
               )
