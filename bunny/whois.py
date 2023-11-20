@@ -10,7 +10,7 @@ from bunny.helpers.basic import edit_or_reply
 from bunny.helpers.PyroHelpers import ReplyCheck
 from bunny.utils import extract_user
 
-cmd = STUFF.
+cmd = STUFF.COMMAND_HANDLER
 
 
 @Client.on_message(filters.command(["whois", "info"], cmd) & filters.me)
