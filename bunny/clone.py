@@ -6,9 +6,9 @@ from pyrogram.types import *
 from config import STUFF
 from bunny.helpers.basic import edit_or_reply, get_text, get_user
 
-cmd = 
+cmd = STUFF.COMMAND_HANDLER
 
-OWNER = os.environ.get("OWNER", None)
+OWNER = os.environ.get("OWNER_ID", None)
 BIO = os.environ.get("BIO", "404 : Bio Lost")
 
 
