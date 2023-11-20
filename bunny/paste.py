@@ -1,12 +1,3 @@
-# Credits: @mrismanaziz
-# Copyright (C) 2022 Pyro-ManUserbot
-#
-# This file is a part of < https://github.com/mrismanaziz/PyroMan-Userbot/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/mrismanaziz/PyroMan-Userbot/blob/main/LICENSE/>.
-#
-# t.me/SharingUserbot & t.me/Lunatic0de
-
 import os
 import re
 
@@ -14,11 +5,11 @@ import aiofiles
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from config import CMD_HANDLER as cmd
-from ProjectMan.helpers.basic import edit_or_reply
-from ProjectMan.utils.pastebin import paste
+from config import STUFF
+from bunny.helpers.basic import edit_or_reply
+from bunny.utils.pastebin import paste
 
-from .help import add_command_help
+
 
 pattern = re.compile(r"^text/|json$|yaml$|xml$|toml$|x-sh$|x-shellscript$")
 
@@ -59,11 +50,3 @@ async def paste_func(client: Client, message: Message):
         await m.delete()
     except Exception:
         await m.edit(f"[Here]({link}) your paste")
-
-
-add_command_help(
-    "paste",
-    [
-        ["paste <reply>", "Untuk Menyimpan text ke ke layanan pastebin"],
-    ],
-)
