@@ -20,11 +20,11 @@ LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
 START_MARKUP_STR = IKM(
                [
                [
-               IKB("💭 Owner 💭", url="t.me/Notrealgeek"),
-               IKB("✨ Support ✨", url="t.me/neiman_chat")
+               IKB(" Owner ", url="t.me/Notrealgeek"),
+               IKB(" Support ", url="t.me/neiman_chat")
                ],
                [
-               IKB("🔥 Repo 🔥", url="https://github.com/Geektyper/RABBITX")
+               IKB(" Repo ", url="https://github.com/Geektyper/RABBITX")
                ]
                ]
                )
@@ -32,7 +32,7 @@ START_MARKUP_STR = IKM(
 START_MARKUP_DEV = IKM(
                [
                [
-               IKB("💫 Commands 💫", callback_data="cmds"),
+               IKB(" Commands ", callback_data="cmds"),
                IKB("💭 Support 💭", url="t.me/DevsX_Community")
                ]
                ]
