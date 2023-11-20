@@ -13,7 +13,7 @@ cmd = STUFF.COMMAND_HANDLER
 async def quotly(client: Client, message: Message):
     args = get_arg(message)
     if not message.reply_to_message and not args:
-        return await message.edit("**Mohon Balas ke Pesan**")
+        return await message.edit("**Please reply to the message.**")
     bot = "QuotLyBot"
     if message.reply_to_message:
         await message.edit("`Making a Quote . . .`")
@@ -35,19 +35,6 @@ async def quotly(client: Client, message: Message):
                     else None,
                 )
             else:
-                return await message.edit("**Gagal Membuat Sticker Quotly**")
+                return await message.edit("**Failed to make Sticker Quotly**")
 
 
-add_command_help(
-    "quotly",
-    [
-        [
-            f"q atau {cmd}quotly",
-            "Membuat pesan menjadi sticker dengan random background.",
-        ],
-        [
-            f"q <warna> atau {cmd}quotly <warna>",
-            "Membuat pesan menjadi sticker dengan custom warna background yang diberikan.",
-        ],
-    ],
-)
