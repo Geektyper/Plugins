@@ -94,6 +94,34 @@ Command :
 **© @NotKeshav**
 """
 
+PM_HELP = f"""
+**Help PM GAURD Cmds**
+
+**PM GAURD :** To Activate Pm Gaurd On Any User
+Command :
+1) {hl}a To Approve a User's dm <reply to user>
+2) {hl}da To Dapprove a User's dm <reply to user>
+
+
+
+**© @userbot_crack**
+"""
+
+ECHO_HELP = f"""
+**Help Echo Cmds**
+
+**Echo :** To Active Echo On Any User
+Command :
+1) {hl}addecho <reply to user>
+2) {hl}rmecho <reply to user>
+
+
+
+**© @userbot_crack**
+"""
+
+
+
 EXTRA_HELP = f"""
 **Help Extra Cmds**
 
