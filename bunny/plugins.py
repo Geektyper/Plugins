@@ -228,7 +228,7 @@ HELP_MARKUP = IKM(
               IKB(" Sangmata ", callback_data="sang"),
               ],
               [
-             IKB(" Carbon ", callback_data="carbon")
+             IKB(" Carbon ", callback_data="carbon"),
               IKB(" Translate ", callback_data="trans"),
               IKB(" Extra ", callback_data="extra"),
               ]
