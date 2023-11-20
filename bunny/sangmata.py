@@ -26,7 +26,7 @@ async def sg(client: Client, message: Message):
         await client.send_message(bot, f"/ {user.id}")
     except YouBlockedUser:
         await client.unblock_user(bot)
-        await client.send_message(bot, f"/ {user.id}")
+        await client.send_message(bot, f" {user.id}")
     await asyncio.sleep(1)
 
     async for stalk in client.search_messages(bot, query="Name", limit=1):
