@@ -1,5 +1,6 @@
 import time
 from config import STUFF , API , TOKENS
+from pyrogram import Client, filters
 
 hl = STUFF.COMMAND_HANDLER
 
