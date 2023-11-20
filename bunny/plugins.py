@@ -163,14 +163,14 @@ CARBON_HELP = f"""
 
 
 **© @Notrealgeek**
-""
+"""
+
 TRRANS_HELP = f"""
 **Help Translate Cmds**
 
 **Translate :** To Translate any text to any language :
 Command :
 1) {hl}tr <reply to a text> to translate it from a dumb language to any u want 
-
 
 
 **© @Notrealgeek**
