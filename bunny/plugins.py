@@ -206,6 +206,20 @@ async def cmds_cbq(_, q):
     await q.answer()
     await q.edit_message_text(text=HELP_TEXT, reply_markup=HELP_MARKUP)
 
+@BOT.on_callback_query(filters.regex("pm"))
+async def extra_cbq(_, q):
+    if not await verify(q.from_user.id):
+        return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
+    await q.answer()
+    await q.edit_message_text(text=PM_HELP, reply_markup=CLOSE_MARKUP)
+
+@BOT.on_callback_query(filters.regex("echo"))
+async def extra_cbq(_, q):
+    if not await verify(q.from_user.id):
+        return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
+    await q.answer()
+    await q.edit_message_text(text=ECHO_HELP, reply_markup=CLOSE_MARKUP)
+
 @BOT.on_callback_query(filters.regex("spam"))
 async def spam_cbq(_, q):
     if not await verify(q.from_user.id):
