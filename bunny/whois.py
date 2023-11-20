@@ -1,12 +1,3 @@
-# Credits: @mrismanaziz
-# Copyright (C) 2022 Pyro-ManUserbot
-#
-# This file is a part of < https://github.com/mrismanaziz/PyroMan-Userbot/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/mrismanaziz/PyroMan-Userbot/blob/main/LICENSE/>.
-#
-# t.me/SharingUserbot & t.me/Lunatic0de
-
 from asyncio import gather
 from os import remove
 
@@ -14,12 +5,12 @@ from pyrogram import Client, filters
 from pyrogram.enums import ChatType
 from pyrogram.types import Message
 
-from config import CMD_HANDLER as cmd
-from ProjectMan.helpers.basic import edit_or_reply
-from ProjectMan.helpers.PyroHelpers import ReplyCheck
-from ProjectMan.utils import extract_user
+from config import STUFF
+from bunny.helpers.basic import edit_or_reply
+from bunny.helpers.PyroHelpers import ReplyCheck
+from bunny.utils import extract_user
 
-from .help import add_command_help
+cmd = STUFF.
 
 
 @Client.on_message(filters.command(["whois", "info"], cmd) & filters.me)
