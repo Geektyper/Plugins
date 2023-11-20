@@ -4,11 +4,13 @@ from pyrogram import Client, filters
 from pyrogram.errors import ChatAdminRequired
 from pyrogram.types import ChatPermissions, ChatPrivileges, Message
 
-from config import CMD_HANDLER as cmd
-from ProjectMan.helpers.adminHelpers import DEVS
-from ProjectMan.helpers.basic import edit_or_reply
-from ProjectMan.modules.help import add_command_help
-from ProjectMan.utils.misc import extract_user, extract_user_and_reason, list_admins
+from config import STUFF 
+from bunny.helpers.adminHelpers import DEVS
+from bunny.helpers.basic import edit_or_reply
+from bunny.modules.help import add_command_help
+from bunny.utils.misc import extract_user, extract_user_and_reason, list_admins
+
+cmd = STUFF.COMMAND_HANDLER
 
 unmute_permissions = ChatPermissions(
     can_send_messages=True,
