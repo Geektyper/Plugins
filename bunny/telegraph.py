@@ -1,22 +1,12 @@
-# Credits: @mrismanaziz
-# Copyright (C) 2022 Pyro-ManUserbot
-#
-# This file is a part of < https://github.com/mrismanaziz/PyroMan-Userbot/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/mrismanaziz/PyroMan-Userbot/blob/main/LICENSE/>.
-#
-# t.me/SharingUserbot & t.me/Lunatic0de
-
-
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from telegraph import Telegraph, exceptions, upload_file
 
-from config import CMD_HANDLER as cmd
-from ProjectMan.helpers.basic import edit_or_reply, get_text
-from ProjectMan.helpers.tools import *
+from config import STUFF
+from bunny.helpers.basic import edit_or_reply, get_text
+from bunny.helpers.tools import *
 
-from .help import *
+cmd = STUFF.COMMAND_HANDLER
 
 telegraph = Telegraph()
 r = telegraph.create_account(short_name="PyroMan-Userbot")
@@ -28,7 +18,7 @@ async def uptotelegraph(client: Client, message: Message):
     Man = await edit_or_reply(message, "`Processing . . .`")
     if not message.reply_to_message:
         await Man.edit(
-            "**Mohon Balas Ke Pesan, Untuk Mendapatkan Link dari Telegraph.**"
+            "**Please Reply to the Message, to Get the Link from Telegraph.**"
         )
         return
     if message.reply_to_message.media:
@@ -43,7 +33,7 @@ async def uptotelegraph(client: Client, message: Message):
             os.remove(m_d)
             return
         U_done = (
-            f"**Berhasil diupload ke** [Telegraph](https://telegra.ph/{media_url[0]})"
+            f"**Successfully uploaded to** [Telegraph](https://telegra.ph/{media_url[0]})"
         )
         await Man.edit(U_done)
         os.remove(m_d)
@@ -56,16 +46,7 @@ async def uptotelegraph(client: Client, message: Message):
         except exceptions.TelegraphException as exc:
             await Man.edit(f"**ERROR:** `{exc}`")
             return
-        wow_graph = f"**Berhasil diupload ke** [Telegraph](https://telegra.ph/{response['path']})"
+        wow_graph = f"**Successfully uploaded to** [Telegraph](https://telegra.ph/{response['path']})"
         await Man.edit(wow_graph)
 
 
-add_command_help(
-    "telegraph",
-    [
-        [
-            f"telegraph atau {cmd}tg",
-            "Balas ke Pesan Teks atau Media untuk mengunggahnya ke telegraph.",
-        ],
-    ],
-)
