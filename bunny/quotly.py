@@ -1,21 +1,12 @@
-# Credits: @mrismanaziz
-# Copyright (C) 2022 Pyro-ManUserbot
-#
-# This file is a part of < https://github.com/mrismanaziz/PyroMan-Userbot/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/mrismanaziz/PyroMan-Userbot/blob/main/LICENSE/>.
-#
-# t.me/SharingUserbot & t.me/Lunatic0de
-
 import asyncio
 
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from config import CMD_HANDLER as cmd
-from ProjectMan.helpers.tools import get_arg
+from config STUFF
+from bunny.helpers.tools import get_arg
 
-from .help import add_command_help
+cmd = STUFF.COMMAND_HANDLER
 
 
 @Client.on_message(filters.me & filters.command(["q", "quotly"], cmd))
