@@ -23,9 +23,6 @@ START_MARKUP_STR = IKM(
                IKB(" Master ", url="t.me/Notrealgeek"),
                IKB(" Support ", url="t.me/DevsX_Community")
                ],
-               [
-               IKB(" Repo ", url="https://github.com/Geektyper/RABBITX")
-               ]
                ]
                )
 
