@@ -167,10 +167,9 @@ CARBON_HELP = f"""
 TRRANS_HELP = f"""
 **Help Translate Cmds**
 
-**Translate :** To Translate and test to any language :
+**Translate :** To Translate any text to any language :
 Command :
 1) {hl}tr <reply to a text> to translate it from a dumb language to any u want 
-2) {hl}rmecho <reply to user>
 
 
 
