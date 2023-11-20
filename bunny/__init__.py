@@ -1,5 +1,5 @@
 import time
-from config import STUFF , API
+from config import STUFF , API , TOKENS
 
 hl = STUFF.COMMAND_HANDLER
 
@@ -45,7 +45,7 @@ app2 = Client(
     "bunny",
     api_id=API.API_ID,
     api_hash=API.API_HASH,
-    session_string=str(config.SESSION),
+    session_string=str(TOKEN.SESSION_SESSION),
 )
 
 
