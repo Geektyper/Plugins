@@ -9,8 +9,7 @@ from bunny import aiosession
 from bunny.helpers.basic import edit_or_reply
 from bunny.helpers.PyroHelpers import ReplyCheck
 
-
-
+cmd = STUFF.COMMAND_HANDLER
 
 async def make_carbon(code):
     url = "https://carbonara.vercel.app/api/cook"
