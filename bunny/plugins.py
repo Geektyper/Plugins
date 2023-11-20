@@ -174,11 +174,7 @@ Command :
 1) {hl}paste <reply to a user>
 
 **whois** Find a user's info
-1) {hl} <reply to a user>info Find any user's info 
-
-**purge** Delete any image 
-1) {hl}del <reply to a text> deletes a message
-2) {hl}purge <reply to a message> deletes multiple messages
+1) {hl}info <reply to a user>info Find any user's info 
 
 **telegraph** Upload image or video to telegraph link
 1) {hl}tg uploads any video or image to telegraph
@@ -191,22 +187,22 @@ HELP_MARKUP = IKM(
               [
               IKB(" Spam ", callback_data="spam"),
               IKB(" Raid ", callback_data="raid")
+              IKB(" Quote ", callback_data="quote"),
               ],
               [
-              IKB(" QUOTE ", callback_data="quote"),
-              IKB(" CLONE ", callback_data="clone")
-              ],
-              [
+              IKB(" Clone ", callback_data="clone")
               IKB(" Extras ", callback_data="extra"),
               IKB(" Echo ", callback_data="echo")
               ],
               [
               IKB(" Pm gaurd ", callback_data="pm"),
-              IKB(" AFK ", callback_data="afk")
+              IKB(" Afk ", callback_data="afk")
+              IKB(" Sangmata ", callback_data="sg")
               ],
               [
-              IKB(" Owner ", url="t.me/notrealgeek"),
-              IKB(" Support ", url="t.me/notrealgeek")
+             IKB(" Carbon ", callback_data="carbon")
+              IKB(" Translate ", callback_data="trans"),
+              IKB(" Purge ", callback_data="pur")
               ]
               ]
               )
