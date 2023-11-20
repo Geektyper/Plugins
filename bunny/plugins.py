@@ -218,7 +218,7 @@ HELP_MARKUP = IKM(
               IKB(" Quote ", callback_data="quote"),
               ],
               [
-              IKB(" Clone ", callback_data="clone")
+              IKB(" Clone ", callback_data="clone"),
               IKB(" Purge ", callback_data="pur"),
               IKB(" Echo ", callback_data="echo"),
               ],
