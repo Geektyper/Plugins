@@ -15,7 +15,7 @@ PMPERMIT = getenv("PMPERMIT","ENABLE")
 PMSET =True
 pchats = []
 BOT_NAME = "RABBITX"
-PMPERMIT = STUFF.PMPERMIT
+PMPERMIT = PMPERMIT
 SUDO_USERS = DEV.SUDO_USERS
 
 @Client.on_message(filters.text & filters.private & ~filters.me & ~filters.bot)
