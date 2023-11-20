@@ -46,7 +46,7 @@ app2 = Client(
     "bunny",
     api_id=API.API_ID,
     api_hash=API.API_HASH,
-    session_string=str(TOKEN.SESSION_SESSION),
+    session_string=str(TOKENS.SESSION_SESSION),
 )
 
 
