@@ -91,7 +91,7 @@ Command :
 2) {hl}dreplyraid <username>
 
 
-**© @NotKeshav**
+**© @Notrealgeek**
 """
 
 PM_HELP = f"""
@@ -104,7 +104,7 @@ Command :
 
 
 
-**© @userbot_crack**
+**© @Notrealgeek**
 """
 
 ECHO_HELP = f"""
@@ -117,7 +117,7 @@ Command :
 
 
 
-**© @userbot_crack**
+**© @Notrealgeek**
 """
 
 AFK_HELP = f"""
@@ -129,7 +129,7 @@ Command :
 
 
 
-**© @userbot_crack**
+**© @Notrealgeek**
 """
 
 
