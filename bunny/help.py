@@ -7,6 +7,8 @@ from bunny import CMD_HELP
 from bunny.helpers.basic import edit_or_reply
 from bunny.helpers.utility import split_list
 
+CMD_HANDLER = STUFF.COMMAND_HANDLER
+
 
 @Client.on_message(filters.command("help", CMD_HANDLER) & filters.me)
 async def module_help(client: Client, message: Message):
