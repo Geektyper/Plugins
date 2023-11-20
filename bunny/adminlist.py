@@ -6,7 +6,7 @@ from pyrogram.types import Message
 from config import STUFF
 from bunny.helpers.basic import edit_or_reply
 from bunny.helpers.parser import mention_html, mention_markdown
-from bunny.modules.help import *
+
 
 cmd = STUFF.COMMAND_HANDLER
 
