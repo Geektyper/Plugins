@@ -185,17 +185,17 @@ Command :
 
 **paste** Paste any file or test as image
 Command :
-1) {h1}paste <reply to a user>
+1) {hl}paste <reply to a user>
 
 **whois** Find a user's info
-1) {h1} <reply to a user>info Find any user's info 
+1) {hl} <reply to a user>info Find any user's info 
 
 **purge** Delete any image 
-1) {h1}del <reply to a text> deletes a message
-2) {h2}purge <reply to a message> deletes multiple messages
+1) {hl}del <reply to a text> deletes a message
+2) {hl}purge <reply to a message> deletes multiple messages
 
 **telegraph** Upload image or video to telegraph link
-1) {h2}tg uploads any video or image to telegraph
+1) {hl}tg uploads any video or image to telegraph
 
 **© @Notrealgeek**
 """
