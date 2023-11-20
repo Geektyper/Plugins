@@ -2,10 +2,10 @@ from prettytable import PrettyTable
 from pyrogram import Client, enums, filters
 from pyrogram.types import Message
 
-from config import CMD_HANDLER
-from ProjectMan import CMD_HELP
-from ProjectMan.helpers.basic import edit_or_reply
-from ProjectMan.helpers.utility import split_list
+from config import STUFF
+from bunny import CMD_HELP
+from bunny.helpers.basic import edit_or_reply
+from bunny.helpers.utility import split_list
 
 
 @Client.on_message(filters.command("help", CMD_HANDLER) & filters.me)
