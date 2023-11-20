@@ -41,16 +41,4 @@ async def get_id_and_args(_, m):
                 id = x.user.id
     return id, args
 
-from config import *
-from config import MONGO_DATABASE
 
-try:
-    LOGGER.info("Connecting To Mongo Database ...")
-    MONGO_DB_URL = Config.MONGO_DATABASE
-    _mongo_async_ = AsyncIOMotorClient(MONGO_DB_URL)
-    mongodb = _mongo_async_.rabbit
-    LOGGER.info("Succesfully Connected.")
-except Exception as e:
-    print(f"Error: {e}")
-    LOGGER.error("Failed To Connect To Your Mongo Database.")
-    exit()
