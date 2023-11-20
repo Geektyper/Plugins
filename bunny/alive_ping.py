@@ -12,7 +12,7 @@ hl = STUFF.COMMAND_HANDLER
 
 form = """
 
-SpL Spam Bot 
+𝗥𝗔𝗕𝗕𝗜𝗧𝗫 𝐁𝐎𝐓 
 
 ┏━━━━━━✦❘༻༺❘✦━━━━━━┓
 ┃☁️ 𝗥𝗔𝗕𝗕𝗜𝗧𝗫 𝐁𝐎𝐓 : V2
