@@ -154,21 +154,26 @@ Command :
 """
 
 CARBON_HELP = f"""
-**Help Carbon Cmds**
+**Help Admin Cmds**
 
-**Carbon :** To make a carbon  :
-1) {hl}addecho <reply to a text > Creates a carbon of given text
+**Admin :** Help menu for admin  :
+1) {hl}ban <reply to a reply to a user> Bans a user
+2) {hl}kick <reply to a user> Kicks a user out of group
+3) {hl}setgpic <reply a picture> sets the given pic as group pic
+
 
 
 **© @Notrealgeek**
 """
 
 TRRANS_HELP = f"""
-**Help Translate Cmds**
+**Help speedtest Cmds**
 
-**Translate :** To Translate any text to any language :
+**speed test :** To do a simple speed test  :
 Command :
-1) {hl}tr <reply to a text> to translate it from a dumb language to any u want 
+1) {hl}speedtest Checks the speed of your userbot
+2) {hl}cping special ping
+3) {hl}speed works same as speedtest 
 
 
 **© @Notrealgeek**
