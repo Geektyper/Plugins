@@ -4,7 +4,6 @@ from config import DEV
 from config import STUFF
 from pyrogram import filters
 from pyrogram.types import Message
-from bunny import CLIENTS
 
 
 PMSET =True
