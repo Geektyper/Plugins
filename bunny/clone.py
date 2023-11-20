@@ -4,9 +4,9 @@ from pyrogram import *
 from pyrogram.types import *
 
 from config import STUFF
-from ProjectMan.helpers.basic import edit_or_reply, get_text, get_user
+from bunny.helpers.basic import edit_or_reply, get_text, get_user
 
-from .help import *
+cmd = 
 
 OWNER = os.environ.get("OWNER", None)
 BIO = os.environ.get("BIO", "404 : Bio Lost")
