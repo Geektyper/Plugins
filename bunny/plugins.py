@@ -20,7 +20,7 @@ LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
 START_MARKUP_STR = IKM(
                [
                [
-               IKB(" Owner ", url="t.me/Notrealgeek"),
+               IKB(" Master ", url="t.me/Notrealgeek"),
                IKB(" Support ", url="t.me/neiman_chat")
                ],
                [
@@ -33,7 +33,7 @@ START_MARKUP_DEV = IKM(
                [
                [
                IKB(" Commands ", callback_data="cmds"),
-               IKB("💭 Support 💭", url="t.me/DevsX_Community")
+               IKB(" Support ", url="t.me/DevsX_Community")
                ]
                ]
                )  
@@ -44,7 +44,7 @@ async def start(_, m):
     x = DEV.SUDO_USERS
     bot_name = " 𝙍𝘼𝘽𝘽𝙄𝙏𝙓"
     if await verify(m.from_user.id):
-        txt = f"**Hello Boss !!, It's Me {bot_name}, Your ʀᴀʙʙɪᴛx Bot !! \n\n Click Below Buttons For Help. 🌚**"
+        txt = f"**Hello Boss !!, It's Me {bot_name}, Your ʀᴀʙʙɪᴛx Bot !! \n\n Click Below Buttons For Help. **"
         await m.reply_photo(START_PIC, caption=txt, reply_markup=START_MARKUP_DEV)
         return
     if str(m.chat.id)[0] == "-":
@@ -163,20 +163,20 @@ Command :
 HELP_MARKUP = IKM(
               [
               [
-              IKB("⚡️ Spam ⚡️", callback_data="spam"),
-              IKB("🔥 Raid 🔥", callback_data="raid")
+              IKB(" Spam ", callback_data="spam"),
+              IKB(" Raid ", callback_data="raid")
               ],
               [
-              IKB("💭 Extras 💭", callback_data="extra"),
-              IKB("💖 Echo 💖", callback_data="echo")
+              IKB(" Extras ", callback_data="extra"),
+              IKB(" Echo ", callback_data="echo")
               ],
               [
-              IKB("🔥 Pm gaurd 🔥", callback_data="pm"),
-              IKB("💖 AFK 💖", callback_data="afk")
+              IKB(" Pm gaurd ", callback_data="pm"),
+              IKB(" AFK ", callback_data="afk")
               ],
               [
-              IKB("😶‍🌫️ Owner 😶‍🌫️", url="t.me/Userbot_crack"),
-              IKB("✨ Support ✨", url="t.me/Neiman_X_support")
+              IKB(" Owner ", url="t.me/Userbot_crack"),
+              IKB(" Support ", url="t.me/Neiman_X_support")
               ]
               ]
               )
@@ -189,7 +189,7 @@ async def help(_, m):
         botun = (await BOT.get_me()).username
     if not await verify(m.from_user.id):
         return
-    ok = await m.reply(" 🙂 ")
+    ok = await m.reply(" 🌟 ")
     try:
         nice = await _.get_inline_bot_results(bot=botun, query="inline_help")
     except Exception as e:
@@ -207,7 +207,7 @@ async def help(_, m):
 CLOSE_MARKUP = IKM(
                [
                [
-               IKB("🗑️ Close", callback_data="close")
+               IKB(" Close", callback_data="close")
                ]
                ]
                )
