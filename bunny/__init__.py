@@ -47,6 +47,7 @@ app2 = Client(
     api_id=API.API_ID,
     api_hash=API.API_HASH,
     session_string=str(TOKENS.STRING_SESSION),
+)
 aiosession = ClientSession()
 
 
