@@ -21,7 +21,7 @@ START_MARKUP_STR = IKM(
                [
                [
                IKB("💭 Owner 💭", url="t.me/Notrealgeek"),
-               IKB("✨ Support ✨", url="t.me/SpLBots")
+               IKB("✨ Support ✨", url="t.me/neiman_chat")
                ],
                [
                IKB("🔥 Repo 🔥", url="https://github.com/Geektyper/RABBITX")
@@ -42,9 +42,9 @@ START_MARKUP_DEV = IKM(
 async def start(_, m):
     DEV.SUDO_USERS.append(DEV.OWNER_ID)
     x = DEV.SUDO_USERS
-    bot_name = "𝙎𝙥𝙇 𝙓 𝙎𝙥𝙖𝙢"
+    bot_name = " 𝙍𝘼𝘽𝘽𝙄𝙏𝙓"
     if await verify(m.from_user.id):
-        txt = f"**Hello Boss !!, It's Me {bot_name}, Your Spam Bot !! \n\n Click Below Buttons For Help. 🌚**"
+        txt = f"**Hello Boss !!, It's Me {bot_name}, Your ʀᴀʙʙɪᴛx Bot !! \n\n Click Below Buttons For Help. 🌚**"
         await m.reply_photo(START_PIC, caption=txt, reply_markup=START_MARKUP_DEV)
         return
     if str(m.chat.id)[0] == "-":
@@ -54,7 +54,7 @@ async def start(_, m):
     await m.reply_photo(START_PIC, caption=txt, reply_markup=START_MARKUP_STR)
     return
 
-HELP_TEXT = "★   𝙎𝙥𝙖𝙢 𝙃𝙚𝙡𝙥 𝙈𝙚𝙣𝙪 ★\n𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐁𝐞𝐥𝐨𝐰 𝐁𝐮𝐭𝐭𝐨𝐧𝐬 𝐅𝐨𝐫 𝐇𝐞𝐥𝐩"
+HELP_TEXT = "★   𝙍𝘼𝘽𝘽𝙄𝙏𝙓 𝙃𝙚𝙡𝙥 𝙈𝙚𝙣𝙪 ★\n𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐁𝐞𝐥𝐨𝐰 𝐁𝐮𝐭𝐭𝐨𝐧𝐬 𝐅𝐨𝐫 𝐇𝐞𝐥𝐩"
 
 SPAM_HELP = spam_msg = f"""
 **Help Spam Cmds**
@@ -69,7 +69,7 @@ Command :
 1) {hl}delayspam <delay> <count> <message to spam> (you can reply any message if you want bot to reply that message and do spamming)
 2) {hl}delayspam <delay> <count> <replying any message>
 
-** © @NotKeshav**
+** © @Notrealgeek**
 """
 
 RAID_HELP = f"""
@@ -117,7 +117,7 @@ Command :
 1) {hl}Join <group/chat id>
 2) {hl}Join : Type in the Group bots will join that group.
 
-**© @NotKeshav**
+**© @Notrealgeek**
 """
 
 HELP_MARKUP = IKM(
