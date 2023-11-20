@@ -1,12 +1,3 @@
-# Credits: @mrismanaziz
-# Copyright (C) 2022 Pyro-ManUserbot
-#
-# This file is a part of < https://github.com/mrismanaziz/PyroMan-Userbot/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/mrismanaziz/PyroMan-Userbot/blob/main/LICENSE/>.
-#
-# t.me/SharingUserbot & t.me/Lunatic0de
-
 import time
 from datetime import datetime
 
@@ -15,14 +6,14 @@ from pyrogram import Client, filters
 from pyrogram.raw import functions
 from pyrogram.types import Message
 
-from config import CMD_HANDLER as cmd
-from ProjectMan import StartTime
-from ProjectMan.helpers.basic import edit_or_reply
-from ProjectMan.helpers.constants import WWW
-from ProjectMan.helpers.PyroHelpers import SpeedConvert
-from ProjectMan.utils.tools import get_readable_time
+from config import STUFF
+from bunny import StartTime
+from bunny.helpers.basic import edit_or_reply
+from bunny.helpers.constants import WWW
+from bunny.helpers.PyroHelpers import SpeedConvert
+from bunny.utils.tools import get_readable_time
 
-from .help import add_command_help
+cmd = STUFF.COMMAND_HANDLER
 
 
 @Client.on_message(filters.command(["speed", "speedtest"], cmd) & filters.me)
@@ -103,22 +94,4 @@ async def kping(client: Client, message: Message):
     )
 
 
-add_command_help(
-    "speedtest",
-    [
-        ["dc", "Untuk melihat DC Telegram anda."],
-        [
-            f"speedtest `atau` {cmd}speed",
-            "Untuk megetes Kecepatan Server anda.",
-        ],
-    ],
-)
-
-
-add_command_help(
-    "ping",
-    [
-        ["ping", "Untuk Menunjukkan Ping Bot Anda."],
-        ["kping", "Untuk Menunjukkan Ping Bot Anda ( Beda animasi doang )."],
-    ],
-)
+cmd = STUFF.COMMAND_HANDLER
