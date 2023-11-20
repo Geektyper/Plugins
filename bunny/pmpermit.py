@@ -4,7 +4,13 @@ from config import DEV
 from config import STUFF
 from pyrogram import filters
 from pyrogram.types import Message
-from config import PMPERMIT
+from os import getenv
+
+from dotenv import load_dotenv
+
+load_dotenv()
+
+PMPERMIT = getenv("PMPERMIT","ENABLE")
 
 PMSET =True
 pchats = []
