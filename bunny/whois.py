@@ -19,7 +19,7 @@ async def who_is(client: Client, message: Message):
     Man = await edit_or_reply(message, "`Processing . . .`")
     if not user_id:
         return await Man.edit(
-            "**Berikan userid/username/reply untuk mendapatkan info pengguna tersebut.**"
+            "Please provide userid/username/reply to get information about that user.**"
         )
     try:
         user = await client.get_users(user_id)
