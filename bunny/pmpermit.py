@@ -4,11 +4,12 @@ from config import SUDO_USERS
 from config import PMPERMIT
 from pyrogram import filters
 from pyrogram.types import Message
-from Rabbit import app2 as USER
-from Rabbit import BOT_NAME
+from bunny import app2 as USER
+
 
 PMSET =True
 pchats = []
+BOT_NAME = RABBITX
 
 @USER.on_message(filters.text & filters.private & ~filters.me & ~filters.bot)
 async def pmPermit(client: USER, message: Message):
