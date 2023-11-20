@@ -154,6 +154,10 @@ HELP_MARKUP = IKM(
               IKB("⚡️ Spam ⚡️", callback_data="spam"),
               IKB("🔥 Raid 🔥", callback_data="raid")
               ],
+              IKB("💖 Echo 💖", callback_data="echo")
+              ],
+              [
+              IKB("🔥 Pm gaurd 🔥", callback_data="pm"),
               [
               IKB("💭 Extras 💭", callback_data="extra")
               ],
