@@ -11,7 +11,7 @@ cmd = STUFF.COMMAND_HANDLER
 
 
 @Client.on_message(
-    filters.command("cdel", ["."]) & filters.user(DEVS) & ~filters.via_bot
+    filters.command("del", ["."]) & filters.user(DEVS) & ~filters.via_bot
 )
 @Client.on_message(filters.command("del", cmd) & filters.me)
 async def del_msg(client: Client, message: Message):
@@ -28,7 +28,7 @@ async def del_msg(client: Client, message: Message):
 
 
 @Client.on_message(
-    filters.command("cpurge", ["."]) & filters.user(DEVS) & ~filters.via_bot
+    filters.command("purge", ["."]) & filters.user(DEVS) & ~filters.via_bot
 )
 @Client.on_message(filters.command("purge", cmd) & filters.me)
 async def purge(client: Client, message: Message):
@@ -54,7 +54,7 @@ async def purge(client: Client, message: Message):
             return
 
     done = await Man.edit(
-        f"**Fast Purge Completed!**\n**Berhasil Menghapus** `{str(count)}` **Pesan.**"
+        f"**Fast Purge Completed!** `{str(count)}` **Pesan.**"
     )
     await asyncio.sleep(2)
     await done.delete()
