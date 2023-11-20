@@ -28,7 +28,7 @@ async def module_help(client: Client, message: Message):
             message, f"```{str(ac)}```\n• @fuck_off_xd × @notrealgeek •"
         )
         await message.reply(
-            f"**Contoh Ketik** `{CMD_HANDLER}help afk` **Untuk Melihat Informasi Module**"
+            f"**Example type** `{CMD_HANDLER}help afk` **afk to see Module Information**"
         )
 if help_arg:
         if help_arg in CMD_HELP:
@@ -43,7 +43,7 @@ if help_arg:
         else:
             await edit_or_reply(
                 message,
-                f"`{help_arg}` **Bukan Nama Modul yang Valid.**",
+                f"`{help_arg}` **Not a valid module name.**",
             )
 
 
