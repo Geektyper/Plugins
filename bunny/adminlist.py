@@ -8,6 +8,7 @@ from bunny.helpers.basic import edit_or_reply
 from bunny.helpers.parser import mention_html, mention_markdown
 from bunny.modules.help import *
 
+cmd = STUFF.COMMAND_HANDLER
 
 @Client.on_message(filters.me & filters.command(["admins", "adminlist"], cmd))
 async def adminlist(client: Client, message: Message):
