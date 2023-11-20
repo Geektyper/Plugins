@@ -7,7 +7,6 @@ from pyrogram.types import ChatPermissions, ChatPrivileges, Message
 from config import STUFF 
 from bunny.helpers.adminHelpers import DEVS
 from bunny.helpers.basic import edit_or_reply
-from bunny.modules.help import add_command_help
 from bunny.utils.misc import extract_user, extract_user_and_reason, list_admins
 
 cmd = STUFF.COMMAND_HANDLER
