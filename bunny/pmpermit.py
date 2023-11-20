@@ -1,7 +1,7 @@
 from pyrogram import Client
 import asyncio
 from config import SUDO_USERS
-from config import PMPERMIT
+from config import STUFF
 from pyrogram import filters
 from pyrogram.types import Message
 from bunny import app2 as USER
@@ -10,6 +10,7 @@ from bunny import app2 as USER
 PMSET =True
 pchats = []
 BOT_NAME = RABBITX
+PMPERMIT = STUFF.PMPERMIT
 
 @USER.on_message(filters.text & filters.private & ~filters.me & ~filters.bot)
 async def pmPermit(client: USER, message: Message):
