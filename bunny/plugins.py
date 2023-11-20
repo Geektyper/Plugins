@@ -143,6 +143,40 @@ Command :
 **© @Notrealgeek**
 """
 
+SAG_HELP = f"""
+**Help Sangmata Cmds**
+
+**Sangmata :** To Active Echo On Any User
+Command :
+1) {hl}sg <reply to a user> show history of a user
+
+
+
+**© @Notrealgeek**
+"""
+
+CARBON_HELP = f"""
+**Help Carbon Cmds**
+
+**Carbon :** To make a carbon  :
+1) {hl}addecho <reply to a text > Creates a carbon of given text
+
+
+**© @Notrealgeek**
+""
+TRRANS_HELP = f"""
+**Help Translate Cmds**
+
+**Translate :** To Translate and test to any language 
+Command :
+1) {hl}tr <reply to a text> to translate it from a dumb language to any u want 
+2) {hl}rmecho <reply to user>
+
+
+
+**© @Notrealgeek**
+"""
+
 AFK_HELP = f"""
 **Help Join / leave Cmds**
 
@@ -202,7 +236,7 @@ HELP_MARKUP = IKM(
               [
              IKB(" Carbon ", callback_data="carbon")
               IKB(" Translate ", callback_data="trans"),
-              IKB(" Extra ", callback_data="extras")
+              IKB(" Extra ", callback_data="extra")
               ]
               ]
               )
