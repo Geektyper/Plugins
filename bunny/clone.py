@@ -1,18 +1,9 @@
-# Credits: @mrismanaziz
-# Copyright (C) 2022 Pyro-ManUserbot
-#
-# This file is a part of < https://github.com/mrismanaziz/PyroMan-Userbot/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/mrismanaziz/PyroMan-Userbot/blob/main/LICENSE/>.
-#
-# t.me/SharingUserbot & t.me/Lunatic0de
-
 import os
 
 from pyrogram import *
 from pyrogram.types import *
 
-from config import CMD_HANDLER as cmd
+from config import STUFF
 from ProjectMan.helpers.basic import edit_or_reply, get_text, get_user
 
 from .help import *
