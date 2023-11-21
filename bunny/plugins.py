@@ -267,7 +267,7 @@ async def help(_, m):
 CLOSE_MARKUP = IKM(
                [
                [
-               IKB(" Close", callback_data="close")
+               IKB(" Back", callback_data="close")
                ]
                ]
                )
@@ -361,6 +361,7 @@ async def close_cbq(_, q):
     if not await verify(q.from_user.id):
         return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
     await q.answer()
-    await q.message.delete()
+    await q.edit_message_text(text=HELP_TEXT, reply_markup=HELP_MARKUP)
+
 
 
