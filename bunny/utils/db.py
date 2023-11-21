@@ -3,7 +3,7 @@ import threading
 import dns.resolver
 import pymongo
 import sqlite3
-from utils import config
+from bunny.utils import config
 
 dns.resolver.default_resolver = dns.resolver.Resolver(configure=False)
 dns.resolver.default_resolver.nameservers = ["8.8.8.8"]
