@@ -225,7 +225,7 @@ HELP_MARKUP = IKM(
               ],
               [
               IKB(" Clone ", callback_data="clone"),
-              IKB(" Purge ", callback_data="pur"),
+              IKB(" Purge ", callback_data="purge"),
               IKB(" Echo ", callback_data="echo"),
               ],
               [
@@ -349,7 +349,7 @@ async def extra_cbq(_, q):
     await q.answer()
     await q.edit_message_text(text=ECHO_HELP, reply_markup=CLOSE_MARKUP)
 
-@BOT.on_callback_query(filters.regex("afk"))
+@BOT.on_callback_query(filters.regex("purge"))
 async def extra_cbq(_, q):
     if not await verify(q.from_user.id):
         return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
