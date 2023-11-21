@@ -24,3 +24,4 @@ opencv-python-headless
 urllib3
 uvloop
 youtube-search-python
+environs
