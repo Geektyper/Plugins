@@ -137,6 +137,6 @@ requirements_list = []
 python_version = f"{version_info[0]}.{version_info[1]}.{version_info[2]}"
 userbot_version = "1.5.0"
 
-prefix = db.get("core.main", "prefix", ".")
+prefix = db.database.get("core.main", "prefix", ".")
 
 
