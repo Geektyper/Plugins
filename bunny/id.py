@@ -1,8 +1,11 @@
 from pyrogram import filters
 
-from config import HANDLER, OWNER_ID
+from config import STUFF , DEV
 from bunny import neko
 
+HANDLER = STUFF.COMMAND_HANDLER
+
+OWNER_ID = DEV.OWNER_ID
 
 @neko.on_message(filters.command("id", prefixes=HANDLER) & filters.user(OWNER_ID))
 async def id(_, m):
