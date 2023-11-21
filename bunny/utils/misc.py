@@ -3,7 +3,7 @@ import sys
 from re import sub
 from time import time
 from sys import version_info
-from bunny.utils import db
+from bunny.utils.db import db
 
 from pyrogram import Client, enums
 
@@ -137,6 +137,6 @@ requirements_list = []
 python_version = f"{version_info[0]}.{version_info[1]}.{version_info[2]}"
 userbot_version = "1.5.0"
 
-prefix = db.database.get("core.main", "prefix", ".")
+prefix = db.get("core.main", "prefix", ".")
 
 
