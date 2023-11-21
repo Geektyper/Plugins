@@ -10,4 +10,4 @@ db_type = env.str("DATABASE_TYPE", "Mongo")
 db_url = env.str("DATABASE_URL", "true")
 db_name = env.str("DATABASE_NAME")
 
-test_server = env.bool("TEST_SERVER", False
+test_server = env.bool("TEST_SERVER", False)
