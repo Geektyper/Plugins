@@ -12,7 +12,7 @@ from typing import Dict
 from PIL import Image
 from pyrogram import Client, errors, types, enums
 
-from .misc import modules_help, prefix, requirements_list
+from bunny.utils.misc import modules_help, prefix, requirements_list
 
 META_COMMENTS = re.compile(r"^ *# *meta +(\S+) *: *(.*?)\s*$", re.MULTILINE)
 interact_with_to_delete = []
