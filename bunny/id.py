@@ -1,53 +1,24 @@
-from io import BytesIO
-from aiohttp import ClientSession
+import os
+
 from pyrogram import Client, filters, enums
 from pyrogram.types import Message
+
 from bunny.utils.misc import modules_help, prefix
-from bunny.utils.scripts import format_exc
+from bunny.utils.scripts import with_reply
 
 
-@Client.on_message(filters.command("readqr", prefix) & filters.me)
-async def readqrcode_handler(client: Client, message: Message):
-    try:
-        if message.photo:
-            filename = await message.download('temp.png')
-        elif message.text:
-            if not message.reply_to_message:
-                return await message.edit(f'Use: <code>{prefix}readqr [reply or photo]</code>', parse_mode=enums.ParseMode.HTML)
-            filename = await message.reply_to_message.download('temp.png')
-        else:
-            return await message.edit(f'Use: <code>{prefix}readqr [reply or photo]</code>', parse_mode=enums.ParseMode.HTML)
+@Client.on_message(filters.command("msave", prefix) & filters.me)
+@with_reply
+async def msave(client: Client, message: Message):
+    media = message.reply_to_message.media
 
-        async with ClientSession() as session:
-            async with session.post(url2, data={'file': open(filename, 'rb').read()}) as response:
-                json = await response.json()
-                text = json[0]["symbol"][0]["data"]
-                if not text:
-                    return await message.reply('<b>Failed to recognize QR code!</b>', parse_mode=enums.ParseMode.HTML)
-                return await message.reply(f'<b>Decrypted text</b>:\n<code>{text}</code>', parse_mode=enums.ParseMode.HTML)
-    except Exception as e:
-        return await message.reply(format_exc(e), parse_mode=enums.ParseMode.HTML)
+    if not media:
+        await message.edit("<b>Media is required</b>", parse_mode=enums.ParseMode.HTML)
+        return
+    await message.delete()
+
+    path = await message.reply_to_message.download()
+    await getattr(client, "send_" + media)("me", path)
+    os.remove(path)
 
 
-url = "https://api.qrserver.com/v1/create-qr-code/?data=" \
-      "{}&size=512x512&charset-source=UTF-8&charset-target=UTF-8&ecc=L&color=0-0-0&bgcolor=255-255-255&margin=1" \
-      "&qzone=1&format=png"
-url2 = "https://api.qrserver.com/v1/read-qr-code/?outputformat=json"
-
-
-@Client.on_message(filters.command("makeqr", prefix) & filters.me)
-async def makeqrcode_handler(client: Client, message: Message):
-    if len(message.text.split()) < 2:
-        return await message.edit(f'Use: <code>{prefix}makeqr [text]</code>', parse_mode=enums.ParseMode.HTML)
-    await message.edit('Generating qrcode...')
-    data = message.text.split(maxsplit=1)[1]
-    try:
-        async with ClientSession() as session:
-            async with session.get(url.format(data)) as response:
-                qrcode = BytesIO(await response.read())
-                qrcode.name = 'qrcode.png'
-                qrcode.seek(0)
-                await message.reply_photo(qrcode)
-                return await message.delete()
-    except Exception as e:
-        return await message.edit(f'<code>{format_exc(e)}</code>', parse_mode=enums.ParseMode.HTML)
