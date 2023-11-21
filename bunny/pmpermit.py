@@ -26,7 +26,7 @@ async def pmPermit(client: Client, message: Message):
             if chat_id in pchats:
                 return
             await message.reply_text(" 
-    𝙍𝘼𝘽𝘽𝙄𝙏𝙓 𝙋𝙈 𝙎𝙚𝙘𝙪𝙧𝙞𝙩𝙮 \n\n ʜᴇʟʟᴏ!! ᴛʜɪꜱ ɪꜱ ᴀɴ ᴀᴜᴛᴏᴍᴀᴛᴇᴅ ᴍᴇꜱꜱᴀɢᴇ ᴏɴ ʙᴇʜᴀʟꜰ ᴏꜰ ᴍʏ ᴏᴡɴᴇʀ \n ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴜɴᴛɪʟ ᴍʏ ᴏᴡɴᴇʀ ᴄᴏᴍᴇꜱ 🙂👍")
+    𝙍𝘼𝘽𝘽𝙄𝙏𝙓 𝙋𝙈 𝙎𝙚𝙘𝙪𝙧𝙞𝙩𝙮 \n\n ʜᴇʟʟᴏ!! ᴛʜɪꜱ ɪꜱ ᴀɴ ᴀᴜᴛᴏᴍᴀᴛᴇᴅ ᴍᴇꜱꜱᴀɢᴇ ᴏɴ ʙᴇʜᴀʟꜰ ᴏꜰ ᴍʏ ᴏᴡɴᴇʀ \n ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴜɴᴛɪʟ ᴍʏ ᴏᴡɴᴇʀ ᴄᴏᴍᴇꜱ ")
             return
 
     
