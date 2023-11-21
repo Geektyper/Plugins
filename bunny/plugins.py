@@ -213,6 +213,12 @@ Command :
 **telegraph** Upload image or video to telegraph link
 1) {hl}tg uploads any video or image to telegraph
 
+**save_self ** saves save restricted pic
+1) {hl} msave saves any self destructive pic
+
+**tts** Makes a voice of given text
+1) {hl} tts (lang) (text)
+
 **© @Notrealgeek**
 """
 
