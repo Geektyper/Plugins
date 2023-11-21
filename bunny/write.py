@@ -27,5 +27,5 @@ async def tts(client: Client, message: Message):
         else:
             await client.send_audio(message.chat.id, voice)
     except Exception as e:
-        await message.edit(format_exc(e))
+        await message.edit(format_exc(e), parse_mode=enums.ParseMode.HTML)
 
