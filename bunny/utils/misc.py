@@ -3,7 +3,7 @@ import sys
 from re import sub
 from time import time
 from sys import version_info
-from bunny.Databse import db
+from bunny.Database import db
 
 from pyrogram import Client, enums
 
