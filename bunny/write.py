@@ -3,8 +3,8 @@ from io import BytesIO
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from utils.misc import modules_help, prefix
-from utils.scripts import format_exc, import_library
+from bunny.utils.misc import modules_help, prefix
+from bunny.utils.scripts import format_exc, import_library
 
 gTTS = import_library("gtts").gTTS
 
