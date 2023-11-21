@@ -57,5 +57,7 @@ StartTime = time.time()
 
 START_TIME = datetime.now()
 
+neko = Client(session_string=SESSION, api_id=API.API_ID, api_hash=API.API_HASH, name="Neko")
+
 
 
