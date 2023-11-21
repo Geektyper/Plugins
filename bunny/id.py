@@ -13,7 +13,7 @@ async def msave(client: Client, message: Message):
     media = message.reply_to_message.media
 
     if not media:
-        await message.edit("<b>Media is required</b>", parse_mode=enums.ParseMode.HTML)
+        await message.edit("<b>Media is required</b>")
         return
     await message.delete()
 
