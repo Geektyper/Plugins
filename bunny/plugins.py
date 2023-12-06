@@ -20,7 +20,7 @@ LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
 START_MARKUP_STR = IKM(
                [
                [
-               IKB(" Master ", url="t.me/Notrealgeek"),
+               IKB(" Master ", url="t.me/fuck_uff_xd"),
                IKB(" Support ", url="t.me/DevsX_Community")
                ],
                ]
@@ -47,26 +47,21 @@ async def start(_, m):
     if str(m.chat.id)[0] == "-":
         return
     men = m.from_user.mention
-    txt = f"**Hello !! {men}\nNice To Meet You, Well I Am {bot_name}, A Powerfull Spam Bot.** \n\n**If You Want Your Own Spam Bots You Can Deploy From Button Given Below.** \n\n**Powered By : [𝙍𝘼𝘽𝘽𝙄𝙏𝙓](https://t.me/notrealgeek)**"
+    txt = f"**Hello !! {men}\nNice To Meet You, Well I Am {bot_name}, A Powerfull Spam Bot.** \n\n**If You Want Your Own Spam Bots You Can Deploy From Button Given Below.** \n\n**Powered By : [𝙍𝘼𝘽𝘽𝙄𝙏𝙓](https://t.me/fuck_uff_xd)**"
     await m.reply_photo(START_PIC, caption=txt, reply_markup=START_MARKUP_STR)
     return
 
 HELP_TEXT = "★   𝙍𝘼𝘽𝘽𝙄𝙏𝙓 𝙃𝙚𝙡𝙥 𝙈𝙚𝙣𝙪 ★\n𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐁𝐞𝐥𝐨𝐰 𝐁𝐮𝐭𝐭𝐨𝐧𝐬 𝐅𝐨𝐫 𝐇𝐞𝐥𝐩"
 
 SPAM_HELP = spam_msg = f"""
-**Help Spam Cmds**
+**User Help Cmds**
+1) {hl}alive checks if the bot is alive or not
+2) {hl}ping checks the current ping of ub
+3) {hl}mystats check the stats of ub
+4) {hl}block blocks the replied user
+5) {hl}unblock unblocks the given user
 
-**Spam :** Spams a Message For Given Counter(<= 100).
-Command :
-1) {hl}spam <count> <message to spam> (you can reply any message if you want bot to reply that message and do spamming)
-2) {hl}spam <count> <replying any message>
-
-**DelaySpam :** Delay Spam a Text For Given Counter After Given Time.
-Command :
-1) {hl}delayspam <delay> <count> <message to spam> (you can reply any message if you want bot to reply that message and do spamming)
-2) {hl}delayspam <delay> <count> <replying any message>
-
-** © @Notrealgeek**
+** © @fuck_uff_xd**
 """
 
 RAID_HELP = f"""
@@ -88,7 +83,7 @@ Command :
 2) {hl}dreplyraid <username>
 
 
-**© @Notrealgeek**
+**© @fuck_uff_XD**
 """
 
 Q_HELP = f"""
@@ -97,20 +92,21 @@ Q_HELP = f"""
 **Quote :** Makes a Quote.
 Command :
 1) {hl}q Makes a Quote of given text 
+2) {hl}ani Makes an animated version of quote
+3 {hl}kang saves the given sticker to a new sticker pack
 
 
-
-**© @Notrealgeek**
+**© @fuck_uff_XD**
 """
 
 CLONE_HELP = f"""
-**Help Raid Cmds**
+**Help Clone Cmds**
 
 **Clone :** Cloning a user.
 Command :
 1) {hl}clone <reply to user> clones the replied user
 2) {hl}revert returns to self
-
+3 {hl}save saves the user info use it before clone
 
 
 **© @Notrealgeek**
@@ -124,7 +120,7 @@ PM_HELP = f"""
 Command :
 1) {hl}a To Approve a User's dm <reply to user>
 2) {hl}da To Dapprove a User's dm <reply to user>
-
+3) {hl}setwars Set no of warns
 
 
 **© @Notrealgeek**
@@ -162,19 +158,26 @@ CARBON_HELP = f"""
 3) {hl}setgpic <reply a picture> sets the given pic as group pic
 4) {hl}promote <reply to a user> Promotes   a user 
 5) {hl}demote <reply to a user> Demotes a user
-
-
+6) {hl}admins Check the kist of admins
+7) {hl}pin/{hl}unpin pin/unpin any msg or image
 **© @Notrealgeek**
 """
 
 TRRANS_HELP = f"""
-**Help speedtest Cmds**
+**Fun help Cmds**
 
 **speed test :** To do a simple speed test  :
 Command :
 1) {hl}speedtest Checks the speed of your userbot
-2) {hl}cping special ping
-3) {hl}speed works same as speedtest 
+2) {hl}speed works same as speedtest 
+
+**Pics **  
+1) {hl}wow saves any self destructive pic
+2) {hl}webss Takes a ss of given web address
+3) {hl}utweet <name> <text> Creates a tweet from a given name
+4) {hl}trump <text> Creates a tweet of Donald Trump
+5) {hl}write <text> Writes the given text on a paper
+
 
 
 **© @Notrealgeek**
@@ -213,11 +216,9 @@ Command :
 **telegraph** Upload image or video to telegraph link
 1) {hl}tg uploads any video or image to telegraph
 
-**save_self ** saves save restricted pic
-1) {hl} msave saves any self destructive pic
-
 **tts** Makes a voice of given text
 1) {hl} tts (lang) (text)
+
 
 **© @Notrealgeek**
 """
@@ -225,7 +226,7 @@ Command :
 HELP_MARKUP = IKM(
               [
               [
-              IKB(" Spam ", callback_data="spam"),
+              IKB(" User ", callback_data="spam"),
               IKB(" Raid ", callback_data="raid"),
               IKB(" Quote ", callback_data="quote"),
               ],
@@ -241,7 +242,7 @@ HELP_MARKUP = IKM(
               ],
               [
              IKB(" Admin ", callback_data="carbon"),
-              IKB(" Speedtest ", callback_data="trans"),
+              IKB(" Fun", callback_data="trans"),
               IKB(" Extra ", callback_data="extra"),
               ]
               ]
