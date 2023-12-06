@@ -27,7 +27,7 @@ class TOKENS:
 class config:
     MONGO_DATABASE = os.getenv("MONGO_DATABASE","")
 class DATABASE:
-    MONGO_DB_URL = os.getenv("MONGO_DB_URL", "")
+    MONGO_DB_URI = os.getenv("MONGO_DB_URI", "")
 
 class DEV:
     OWNER_ID = int(os.getenv("OWNER_ID", ""))
