@@ -1,24 +1,10 @@
-import os
+from pyrogram import Client, filters
+from config import HANDLER as hl
+from bunny.core.clients import bunny as Client
 
-from pyrogram import Client, filters, enums
-from pyrogram.types import Message
-
-from bunny.utils.misc import modules_help, prefix
-from bunny.utils.scripts import with_reply
-
-
-@Client.on_message(filters.command("msave", prefix) & filters.me)
-@with_reply
-async def msave(client: Client, message: Message):
-    media = message.reply_to_message.media
-
-    if not media:
-        await message.edit("<b>Media is required</b>")
-        return
-    await message.delete()
-
-    path = await message.reply_to_message.download()
-    await getattr(client, "send_" + media)("me", path)
-    os.remove(path)
-
-
+@Client.on_message(filters.command('id',  hl) & filters.me)
+async def find_id(client, message):
+    if message.reply_to_message is None:
+        await message.edit(f"**__๏ Chat ID »__** `{message.chat.id}`")
+    else:
+        await message.edit(f"**__๏ User ID »**__ `{message.reply_to_message.from_user.id}`\n**__๏ Chat ID »**__ `{message.chat.id}`")
