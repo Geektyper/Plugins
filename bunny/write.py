@@ -1,7 +1,7 @@
 from pyrogram import filters , Client
 from pyrogram.types import *
 import requests
-import config *
+import config import *
 HANDLER = STUFF.COMMAND_HANDLER
 
 @Client.on_message(filters.me & filters.command("write",prefixes=HANDLER))
