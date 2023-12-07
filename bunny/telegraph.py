@@ -44,9 +44,7 @@ async def uptotelegraph(client: Client, message: Message):
         try:
             response = telegraph.create_page(page_title, html_content=page_text)
         except exceptions.TelegraphException as exc:
-            await Man.edit(f"**ERROR:** `{exc}`")
+            await geek.edit(f"**ERROR:** `{exc}`")
             return
         wow_graph = f"**Successfully uploaded to** [Telegraph](https://telegra.ph/{response['path']})"
         await geek.edit(wow_graph)
-
-
