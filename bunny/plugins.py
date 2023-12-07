@@ -4,7 +4,6 @@ import time
 from .data import KeshavX
 from external_client import BOT
 from pyrogram import Client, filters
-from client import BOT
 
 hl = STUFF.COMMAND_HANDLER
 from .verify import verify
