@@ -2,7 +2,7 @@ import os
 from pyrogram import Client, filters
 from config import STUFF
 
-hl = STUFF.HANDLER
+hl = STUFF.COMMAND_HANDLER
 
 @Client.on_message(filters.command("wow",  hl) & filters.private & filters.me)
 async def self_media(client, message):
