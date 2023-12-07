@@ -7,7 +7,7 @@ from pyrogram.types import *
 
 from config import STUFF
 from bunny.helpers.basic import edit_or_reply
-from bunny.utils import extract_user
+from bunny.utils.misc import extract_user
 
 cmd = STUFF.COMMAND_HANDLER
 
