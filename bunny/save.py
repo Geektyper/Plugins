@@ -1,6 +1,5 @@
 import os
 from pyrogram import Client, filters
-from bunny.core.clients import bunny as Client
 from config import STUFF
 
 hl = STUFF.HANDLER
