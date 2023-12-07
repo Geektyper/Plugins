@@ -4,7 +4,7 @@ import requests
 import config *
 HANDLER = STUFF.COMMAND_HANDLER
 
-@Client.on_message(filters.me & filters.command("write",prefixes=config.HANDLER))
+@Client.on_message(filters.me & filters.command("write",prefixes=HANDLER))
 async def handwriting(_, message):
     if len(message.command) < 2:
         return await message.reply_text("» Give some text to write...")
