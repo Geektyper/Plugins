@@ -163,7 +163,7 @@ CARBON_HELP = f"""
 **© @Notrealgeek**
 """
 
-TRRANS_HELP = f"""
+TRANS_HELP = f"""
 **Fun help Cmds**
 
 **speed test :** To do a simple speed test  :
