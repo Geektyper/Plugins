@@ -2,7 +2,7 @@ from pyrogram import filters , Client
 from pyrogram.types import *
 import requests
 import config *
-HANDLER = COMMAND_HANDLER
+HANDLER = STUFF.COMMAND_HANDLER
 
 @Client.on_message(filters.me & filters.command("write",prefixes=config.HANDLER))
 async def handwriting(_, message):
