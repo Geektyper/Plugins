@@ -1,5 +1,5 @@
 from pyrogram import Client, filters
-from config import COMMAND_HANDLER as hl
+from config import STUFF.COMMAND_HANDLER as hl
 from bunny.core.clients import bunny as Client
 
 @Client.on_message(filters.command('id',  hl) & filters.me)
