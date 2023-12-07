@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
-from config import STUFF.COMMAND_HANDLER as hl
-from bunny.core.clients import bunny as Client
+from config import STUFF 
+hl = STUFF.COMMAND_HANDLER
 
 @Client.on_message(filters.command('id',  hl) & filters.me)
 async def find_id(client, message):
